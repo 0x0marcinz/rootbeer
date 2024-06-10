@@ -5,12 +5,13 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+runs:
+  using: 'node20'
+  main: 'main.js'
 jobs:
   build:
 
     runs-on: ubuntu-latest
-    using: 'node20'
     steps:
     - uses: actions/checkout@v4
     - name: set up JDK 11
